@@ -26,7 +26,7 @@
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 
         <!-- Disable the second-level cache  -->
-        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+        <!--<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>-->
 
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
@@ -34,7 +34,7 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">create</property>
 
-        <!--将配置实体bean hbm文件引入-->
+        <!--将配置实体bean hbm文件引入, what's the difference between file&resource??? 麻痹，本来就应该用resource，这傻逼讲错了-->
         <mapping resource="me/xuzhe/model/HibernateUser.hbm.xml"/>
 
     </session-factory>
