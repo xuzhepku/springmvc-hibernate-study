@@ -35,7 +35,7 @@
         <property name="hbm2ddl.auto">create</property>
 
         <!--将配置实体bean hbm文件引入, what's the difference between file&resource??? 麻痹，本来就应该用resource，这傻逼讲错了-->
-        <mapping resource="me/xuzhe/model/HibernateUser.hbm.xml"/>
+        <mapping resource="HibernateUser.hbm.xml"/>
 
     </session-factory>
 
