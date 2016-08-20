@@ -58,7 +58,7 @@ public class UserController {
             for (MultipartFile attach : attachs) {
                 if (attach.isEmpty()) continue;
                 System.out.println(attach.getName() + "," + attach.getOriginalFilename() + "," + attach.getContentType());
-                String realPath = req.getServletContext().getRealPath("/resources/upload");
+                String realPath = req.getSession().getServletContext().getRealPath("/resources/upload");
                 System.out.println(realPath);
                 File f = new File(realPath + "/" + attach.getOriginalFilename());
                 try {
@@ -82,7 +82,6 @@ public class UserController {
     /**
      * 返回JSON
      * @param username
-     * @param model
      * @return
      */
     @RequestMapping(value = "/{username}", method = RequestMethod.GET, params = "json")
